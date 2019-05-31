@@ -1,0 +1,40 @@
+
+func derivCC() {
+	// (yt, CC, PP1, PP2)
+	// ($1, $2, $3, $4)
+	return -$2 / taum + bet * $1 * alp * (1 / taum + frac * (delta * $3 - delta2 * $4))
+}
+
+func derivKK() {
+	// (CC, KK)
+	return gamma * $1 - eta * $2
+}
+
+func derivPP1() {
+	// (KK, PP1, yt)
+	//  $1,  $2, $3	return omega * $1 - (lambda + $3 * delta) * $2 + M * $2 ^ 2 / (A + $2 ^ 2)
+}
+
+func derivPP2() {
+	// (KK, PP2, yt)
+	//  $1,  $2, $3	return omega2 * $1 - (lambda2 + $3 * delta2) * $2 + M2 * $2 ^ 2 / (A2 + $2 ^ 2)
+}
+
+func derivxt() {
+	// (zt, xt)
+	//  $1, $2
+	return $1 / trec - USE * $2 * i
+}
+
+func derivyt() {
+	// (yt, xt)
+	//  $1, $2
+	return -$1 / tin + USE * $2 * i
+}
+
+func derivzt() {
+	//  (yt, zt)
+	//   $1, $2
+	return $1 / tin - $2 / trec
+}
+
